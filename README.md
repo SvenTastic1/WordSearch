@@ -9,7 +9,7 @@ input specifies the number of columns of the grid and also takes an integer valu
 a d r i q
 b n a a n
 b o l k d
-a h f l s
+a h f l s    (shown as a grid in raw file)
 
 number of rows?: 4
 number of columns?: 5
