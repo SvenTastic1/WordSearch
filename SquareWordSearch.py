@@ -7,12 +7,12 @@ search1d = puzlayout.split(' ', puzrow*puzcol-1)
 #spaces which means too little values were created compared to the entered letters in puzlayout. The program
 #should create entered row*column entries. If more letters were entered this error will trigger. 
 if ' ' in search1d[-1]:  #Checks to see if the last element is 
-	print 'You specified the grid should countain',puzrow*puzcol,'elements, but you typed in more'
-	print 'The final mined entry looks like this: ',search1d[-1]
+	print ('You specified the grid should countain',puzrow*puzcol,'elements, but you typed in more')
+	print ('The final mined entry looks like this: ',search1d[-1])
 	exit()
 #if too little variables were entered this error will trigger
 elif puzrow*puzcol != len(search1d):
-	print 'You specified the grid should contain',puzrow*puzcol,'elements, but you specified',len(search1d),'elements.'
+	print ('You specified the grid should contain',puzrow*puzcol,'elements, but you specified',len(search1d),'elements.')
 	exit()
 else: 
 	pass
@@ -53,7 +53,7 @@ def find_words_puzzle(puzrow, puzcol, workword, search2d):
 						colright += 1
 						nextlet += 1
 						if nextlet is len(workword):
-							print 'the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned to the right.'
+							print ('the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned to the right.')
 							return 'right'	#The word has been identified and the function can be exited			
 				except Exception:
 					pass #Skip over index errors since there is no point in writing verbose code to prevent it from happening: it is easier to pass over the error
@@ -65,7 +65,7 @@ def find_words_puzzle(puzrow, puzcol, workword, search2d):
 						nextlet += 1
 						colleft -= 1
 						if nextlet is len(workword):
-							print 'the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned to the left.'
+							print ('the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned to the left.')
 							return 'left'
 				except Exception:
 					pass #Skip
@@ -77,7 +77,7 @@ def find_words_puzzle(puzrow, puzcol, workword, search2d):
 						nextlet += 1
 						rowup -= 1
 						if nextlet is len(workword):
-							print 'the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned upwards.'
+							print ('the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned upwards.')
 							return 'up'
 				except Exception:
 					pass #Skip	
@@ -89,7 +89,7 @@ def find_words_puzzle(puzrow, puzcol, workword, search2d):
 						nextlet += 1
 						rowdown += 1
 						if nextlet is len(workword):
-							print 'the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned downwards.'
+							print ('the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned downwards.')
 							return 'down'
 				except Exception:
 					pass #Skip			
@@ -103,7 +103,7 @@ def find_words_puzzle(puzrow, puzcol, workword, search2d):
 						colright += 1
 						nextlet += 1
 						if nextlet is len(workword):
-							print 'the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned diagonally up to the right.'
+							print ('the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned diagonally up to the right.')
 							return 'diagonal up right'
 				except Exception:
 					pass #Skip			
@@ -117,7 +117,7 @@ def find_words_puzzle(puzrow, puzcol, workword, search2d):
 						colleft -= 1
 						nextlet += 1
 						if nextlet is len(workword):
-							print 'the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned diagonally up to the left.'
+							print ('the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned diagonally up to the left.')
 							return 'diagonal up left'
 				except Exception:
 					pass #Skip		
@@ -131,7 +131,7 @@ def find_words_puzzle(puzrow, puzcol, workword, search2d):
 						colright += 1
 						nextlet += 1
 						if nextlet is len(workword):
-							print 'the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned diagonally down to the right.'
+							print ('the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned diagonally down to the right.')
 							return 'diagonal down right'
 				except Exception:
 					pass #Skip		
@@ -145,7 +145,7 @@ def find_words_puzzle(puzrow, puzcol, workword, search2d):
 						colleft -= 1
 						nextlet += 1
 						if nextlet is len(workword):
-							print 'the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned diagonally down to the left.'
+							print ('the word',workword,'has been found in row',i+1,'column',j+1,'and is spanned diagonally down to the left.')
 							return 'diagonal down left'
 				except Exception:
 					pass #Skip
